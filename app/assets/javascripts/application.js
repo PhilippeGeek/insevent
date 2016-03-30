@@ -13,10 +13,15 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require select2
+//= require select2_locale_fr
 //= require_tree .
 $(function(){
     $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+    });
+    $( ".with-s2 select" ).select2({
+        theme: "bootstrap"
     });
 });

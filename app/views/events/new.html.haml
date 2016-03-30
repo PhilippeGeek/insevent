@@ -2,6 +2,7 @@
 %p= t('events.explain')
 = simple_form_for @event do |f|
   = f.input :name
+  .with-s2= f.association :tags, class: %w(s2-dropdown)
   = f.input :location
   = f.input :time
   = f.input :email

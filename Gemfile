@@ -16,6 +16,7 @@ group :development do
 end
 gem 'administrate'
 gem 'bootstrap-sass'
+gem 'select2-rails'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise_invitable'
