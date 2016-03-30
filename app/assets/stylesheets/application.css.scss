@@ -16,3 +16,14 @@
 body, html{
   height: 100%;
 }
+
+.sidebar-nav{
+  .logo{
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    float: left;
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+}
