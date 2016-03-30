@@ -1,1 +1,5 @@
 fr:
+  events:
+    create: "Enregistrer un événement"
+    explain: "Vous pouvez enregistrer un événement à l'aide de cette page, il sera ensuite envoyé pour modération."
+    send_to_big_brother: "Envoyer à la modération"

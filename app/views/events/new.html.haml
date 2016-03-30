@@ -1,2 +1,10 @@
-%h1 Events#new
-%p Find me in app/views/events/new.html.haml
+%h1= t('events.create')
+%p= t('events.explain')
+= simple_form_for @event do |f|
+  = f.input :name
+  = f.input :location
+  = f.input :time
+  = f.input :email
+  = f.input :website
+  = f.input :description
+  = f.button :submit, t('events.send_to_big_brother'), class: 'btn-block'
