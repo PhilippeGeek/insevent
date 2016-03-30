@@ -4,6 +4,6 @@
     %a{:href => "#"}
       INSEvent
   %li
-    = link_to 'Home', root_url
+    = link_to t('home'), root_url
   %li
-    = link_to 'Post an event', '/event'
+    = link_to t('events.create'), :new_event
