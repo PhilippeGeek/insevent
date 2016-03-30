@@ -51,11 +51,4 @@ test:
   template: template0
 
 production:
-  adapter:  postgresql
-  host:     localhost
-  encoding: unicode
-  database: insevent_production
-  pool:     5
-  username: insevent
-  password:
-  template: template0
+  url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
