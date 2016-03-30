@@ -29,3 +29,27 @@ body, html{
     margin-left: 15px;
   }
 }
+
+.event{
+  .panel-heading{
+    .pull-right{
+      height: 60px;
+    }
+    .time, .t{
+      text-align: center;
+      text-transform: uppercase;
+      .weekday{
+        font-size: smaller;
+      }
+      .day, .month{
+        font-weight: bolder;
+        font-size: larger;
+      }
+    }
+    .t{
+      line-height: 60px;
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+  }
+}
