@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+
+  resources :events, only: [:index, :new, :create, :show]
+
   authenticate :user do
     namespace :admin do
       resources :users
