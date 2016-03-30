@@ -11,11 +11,5 @@
     -#%header
     -#  = render 'layouts/navigation'
     %main{:role => "main"}
-      #wrapper
-        / Sidebar
-        #sidebar-wrapper
-          = render :partial => 'layouts/sidebar'
-        / Page Content
-        #page-content-wrapper
-          = render 'layouts/messages'
-          = yield
+      = render 'layouts/messages'
+      = yield
