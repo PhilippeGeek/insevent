@@ -51,4 +51,4 @@ test:
   template: template0
 
 production:
-  url: <%= ENV['DATABASE_URL'].sub(/^postgres/, "postgis") %>
+  url: <%= ENV['DATABASE_URL'] %>
