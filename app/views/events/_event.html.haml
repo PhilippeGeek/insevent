@@ -1,0 +1,22 @@
+.panel.panel-default.event
+    .panel-heading
+        .pull-left
+            %h1.panel-title= event.name
+            =event.location
+        .pull-right
+            .time
+                .weekday= l event.time, format:'%a'
+                .day= l event.time, format:'%d'
+                .month= l event.time,format:'%B'
+        .pull-right
+            .t= l event.time, format:'%H:%M'
+        .clearfix
+    .panel-body
+        %p
+        - event.tags.each do |tag|
+            %span.label-default.label{style: "background-color:#{tag.color}"}=tag.name
+        %p= simple_format event.description
+    .list-group
+        = link_to event.website, class: %w(list-group-item), target: '_blank' do
+            Plus d'informations
+            %i.glyphicon.glyphicon-arrow-right.pull-right

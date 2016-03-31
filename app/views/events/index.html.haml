@@ -1,2 +1,9 @@
-%h1 Events#index
-%p Find me in app/views/events/index.html.haml
+.row.container.center-block
+  .col-md-12
+    -#%form.row
+    -#  .form-group.col-sm-10
+    -#    .with-s2= select_tag 'filter', options_for_select(Tag.all.map {|t| [t.name, t.id]}, (@filter_ids or [])), class: 'form-control', multiple: true
+    -#  %button.col-sm-2.btn.btn-primary=t('filter')
+  - @events.each do |event|
+    .col-md-6
+      = render :partial => 'event', locals: {event: event}

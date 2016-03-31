@@ -1,6 +1,11 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.published
+    if filter_param.nil?
+      @events = Event.published
+    else
+      @events = Event.find(:all, include: :tags, conditions: ['tag.id IN (?)',filter_param]).distinct
+      @filter_ids = filter_param.map {|v|v.to_i}
+    end
     respond_to do |format|
       format.html { render }
       format.json { render json: @events }
@@ -40,5 +45,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :time, :location, :email, :website, tag_ids: [])
+  end
+
+  def filter_param
+    params.require(:filter) or nil
   end
 end

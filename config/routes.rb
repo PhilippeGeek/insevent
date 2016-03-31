@@ -10,6 +10,6 @@ Rails.application.routes.draw do
       root to: "users#index"
     end
   end
-  root to: 'visitors#index'
+  root to: 'events#index'
   devise_for :users
 end
